@@ -26,17 +26,17 @@
 
   <script src="/socket.io/socket.io.js"></script>
   <script>
-    var socket = io('http://10.0.4.97');
+    var socket = io(document.location.origin);
 
     var prevButton = document.getElementById('prev-button');
     prevButton.addEventListener('click', function() {
-      console.log('Prev button clicked');
+      // console.log('Prev button clicked');
       socket.emit('prev', {back:true});
     });
 
     var nextButton = document.getElementById('next-button');
     nextButton.addEventListener('click', function() {
-      console.log('Next button clicked');
+      // console.log('Next button clicked');
       socket.emit('next', {next:true});
     });
   </script>

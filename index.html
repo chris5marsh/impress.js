@@ -366,19 +366,16 @@ if ("ontouchstart" in document.documentElement) {
 var api = impress();
 api.init();
 
-var socket = io('http://localhost');
 
-socket.on('news', function (data) {
-    console.log(data);
-});
+var socket = io(document.location.origin);
 
 socket.on('prev', function (data) {
-    console.log('Go to prev', data);
+    // console.log('Go to prev', data);
     api.prev();
 });
 
 socket.on('next', function (data) {
-    console.log('Go to next', data);
+    // console.log('Go to next', data);
     api.next();
 });
 </script>
