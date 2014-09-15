@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="minimal-ui" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <title>impress.js with socket.io</title>
+
+  <meta name="description" content="impress.js presentation using your mobile as a remote, with sockets.io" />
+  <meta name="author" content="Chris Marsh" />
+
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+
+  <link href="css/impress-remote.css" rel="stylesheet" />
+
+  <link rel="shortcut icon" href="favicon.png" />
+  <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+
+</head>
+
+<body>
+
+  <div class="controller">
+      <button class="prev" id="prev-button">Back</button>
+      <button class="next" id="next-button">Next</button>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    var socket = io('http://10.0.4.97');
+
+    var prevButton = document.getElementById('prev-button');
+    prevButton.addEventListener('click', function() {
+      console.log('Prev button clicked');
+      socket.emit('prev', {back:true});
+    });
+
+    var nextButton = document.getElementById('next-button');
+    nextButton.addEventListener('click', function() {
+      console.log('Next button clicked');
+      socket.emit('next', {next:true});
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,21 @@
+{
+  "name": "ImpressWithSockets",
+  "version": "1.0.0",
+  "description": "none",
+  "main": "Gruntfile.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/chris5marsh/impress.js.git"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Chris Marsh",
+    "url": "http://chrismar.sh"
+  },
+  "license": "",
+  "devDependencies": {
+    "socket.io": "~1.1.0",
+    "serve-static": "~1.6.1",
+    "finalhandler": "~0.2.0"
+  }
+}
