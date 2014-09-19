@@ -19,11 +19,11 @@ io.on('connection', function (socket) {
   // Listen for events from mobile
   socket.on('prev', function (data) {
     io.emit('prev', data);
-    console.log('Prev button clicked', data);
+    // console.log('Prev button clicked', data);
   });
   socket.on('next', function (data) {
     io.emit('next', data)
-    console.log('Next button clicked', data);
+    // console.log('Next button clicked', data);
   });
 });
 

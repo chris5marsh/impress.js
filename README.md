@@ -11,6 +11,7 @@ Currently, anyone on the same network with your computer's IP address can contro
 ## Acknowledgements:
 
 [Bartek Szopka](https://github.com/bartaz) for the brilliant Impress.js
+
 [Automattic](https://github.com/Automattic) for the ease of socket.io
 
 ## Changelog
